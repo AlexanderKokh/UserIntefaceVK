@@ -6,4 +6,8 @@
 //  Copyright © 2020 Alexander Kokh. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class FriendCell: UICollectionViewCell {
+    @IBOutlet weak var friendAvatar: UIImageView!
+}

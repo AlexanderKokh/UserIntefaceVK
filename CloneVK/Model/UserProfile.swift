@@ -26,9 +26,20 @@ class UserFriends: UITableViewController {
         super.viewDidLoad()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if segue.identifier == "showFriendPage",
+            let cell = sender as? UserCell,
+            let destination = segue.destination as? FriendViewController {
+            destination.friendImage = cell.friendImage.image
+            destination.friendtitle = cell.friendNameLabel.text
+        }
+    }
+        
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return friends.count
     }
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell") as? UserCell else { fatalError()}
