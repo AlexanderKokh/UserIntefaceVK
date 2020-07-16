@@ -52,18 +52,40 @@ class ViewController: UIViewController {
         scrollViewLogin.endEditing(true)
     }
 
-    @IBAction func login(_sender: UIButton) {
+    private func checkLoginInfo() -> Bool {
         
-        guard let logintext = loginTextField.text else { return }
-        guard let passtext = passwordTextField.text else { return }
-   
-        if logintext == "Alex", passtext == "qwe777" {
+        guard let logintext = loginTextField.text else { return false}
+        guard let passtext = passwordTextField.text else { return false}
+        
+        if logintext == "admin", passtext == "1234" {
             print("successful authorization")
+            return true
         }
         else {
             print("uncorrect password or login, please retry")
+            return false
         }
     }
-
+    
+    private func showLoginError() {
+        let alert = UIAlertController(title: "Autorization Error", message: "Login or Password is not correct", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(action)
+        
+        present(alert,animated: true, completion: nil)
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "loginSeque" {
+            if checkLoginInfo() {
+                return true
+            }
+            else {
+                showLoginError()
+                return false
+            }
+        }
+        return true
+    }
 }
 
