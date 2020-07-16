@@ -11,6 +11,5 @@ import UIKit
 class AllGroupCell: UITableViewCell {
     @IBOutlet weak var newGroupNameLabel: UILabel!
     @IBOutlet weak var newGroupImage: UIImageView!
-    @IBOutlet weak var newAddBuuton: UIButton!
-}
+    }
 

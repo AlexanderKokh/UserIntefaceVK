@@ -352,21 +352,15 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXl-Tn-0Es">
-                                            <rect key="frame" x="379" y="33" width="25" height="24"/>
-                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="14Z-oc-Yf2" secondAttribute="trailing" constant="40" id="3aA-lt-emN"/>
-                                        <constraint firstItem="ZXl-Tn-0Es" firstAttribute="centerY" secondItem="Mc6-0n-HUp" secondAttribute="centerY" id="PIG-Nc-Uox"/>
-                                        <constraint firstAttribute="trailing" secondItem="ZXl-Tn-0Es" secondAttribute="trailing" constant="10" id="a3D-bh-tVC"/>
                                         <constraint firstItem="14Z-oc-Yf2" firstAttribute="centerY" secondItem="Mc6-0n-HUp" secondAttribute="centerY" id="f60-hJ-xhk"/>
                                         <constraint firstItem="BbH-Vs-dts" firstAttribute="centerY" secondItem="Mc6-0n-HUp" secondAttribute="centerY" id="hCc-bT-lgu"/>
                                         <constraint firstItem="BbH-Vs-dts" firstAttribute="leading" secondItem="Mc6-0n-HUp" secondAttribute="leading" constant="30" id="ntF-M5-AHr"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="newAddBuuton" destination="ZXl-Tn-0Es" id="e6l-WE-gkR"/>
                                     <outlet property="newGroupImage" destination="14Z-oc-Yf2" id="8ns-3s-eHH"/>
                                     <outlet property="newGroupNameLabel" destination="BbH-Vs-dts" id="WK7-OH-gai"/>
                                 </connections>
