@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 class LikeControl: UIControl {
     
     private var count: Int = 0
